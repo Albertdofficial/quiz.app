@@ -1,9 +1,13 @@
-const correctAnswers = ["C", "B", "A", "A", 'B'];
+const correctAnswers = ["C", "B", "A", "A", "B"];
 
 const form = document.querySelector(".quiz-form");
 const result = document.querySelector(".result");
 const resultPara = document.querySelector(".result-para");
 const body = document.querySelector("body");
+const inputEls = document.querySelectorAll("input");
+
+// let correctEl = document.createElement("p");
+let count = 0;
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -14,6 +18,7 @@ form.addEventListener("submit", (e) => {
     form.q2.value,
     form.q3.value,
     form.q4.value,
+    form.q5.value,
   ];
 
   // check answers
